@@ -4,8 +4,9 @@ from loja import views
 
 router = routers.DefaultRouter()
 
-router.register('posts', views.PostView)
-router.register('comentarios', views.ComentarioView)
+router.register('posts', views.PostView, basename='posts')
+router.register('usuarios', views.UsuarioView, basename='usuarios')
+
 
 
 urlpatterns = [

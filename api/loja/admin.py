@@ -10,6 +10,7 @@ class UsuarioAdmin(admin.ModelAdmin):
         'email'
     ]
     ordering = ['username']
+    list_display = ['username']
 
 
 @admin.register(models.Post)
@@ -17,11 +18,9 @@ class PostAdmin(admin.ModelAdmin):
     fields = [
         'titulo',
         'usuario',
-        'data_criacao',
         'texto',
         'curtidas'
     ]
-    list_filter = ['usuario', 'data_criacao']
     ordering = ['usuario']
 
 
